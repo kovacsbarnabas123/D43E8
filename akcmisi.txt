@@ -19,10 +19,30 @@
 6.5 SELECT nev, varos, osztaly, atlag FROM tanulok WHERE (varos = "budapest" OR varos ="érd") AND atlag >= 4 AND osztaly != "11.b"
 
 7.1 SELECT id, nev, email FROM tanulok WHERE email IS null
-7.2 
 
+7.2 INSERT INTO tanulok VALUES (9, "Kovács Emma", "10.A", 16, "Budapest", 4.0, 3, 0, NULL)
+SELECT * FROM tanulok WHERE nev ="Kovács Emma"
 
+7.3 UPDATE tanulok SET email = "emma@iskola.hu" WHERE id = 9
+SELECT id, nev, email FROM tanulok WHERE id = 9
 
+7.4 UPDATE tanulok SET atlag = 4.5 AND osztondijas = 1 WHERE id = 9
+SELECT nev, atlag, osztondijas FROM tanulok WHERE id = 9
+
+7.5 DELETE FROM tanulok WHERE id = 9
+SELECT COUNT(*) FROM tanulok
+
+8.1 SELECT id, nev FROM tanulok LIMIT 3
+
+8.2 SELECT nev, atlag FROM tanulok ORDER BY atlag DESC LIMIT 3
+
+8.3 SELECT nev, hianyzas FROM tanulok ORDER BY hianyzas asc LIMIT 3
+
+8.4 SELECT nev, atlag FROM tanulok WHERE varos = "Budapest" ORDER BY atlag DESC LIMIT 3
+
+8.5 SELECT nev,osztaly, atlag FROM tanulok WHERE osztaly = "11.a" OR osztaly = "11.b" ORDER BY atlag DESC LIMIT 4
+
+9.1
 
 
 
